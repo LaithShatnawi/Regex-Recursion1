@@ -64,10 +64,9 @@ function permutations(n, k) {
     let arr = [];
     if (n == 1) {
         return 1;
-        arr.push();
     } else {
-        arr.unshift(`${n - 1}`)
-        result = (n * permutations(n - 1, k)) / ((n - k) * permutations(n - k - 1))
+        arr.unshift(`${n}`)
+        result = (n * permutations(n - 1, k)) / ((n - k) * permutations(n - k, (n - k) - 1))
         return;
     }
 };
